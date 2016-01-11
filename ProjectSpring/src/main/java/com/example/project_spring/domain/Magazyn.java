@@ -14,7 +14,7 @@ import javax.persistence.NamedQuery;
 
 public class Magazyn {
 	
-	private Long idPosition;
+	private Long id;
 	
 	private String name;
 	
@@ -25,11 +25,11 @@ public class Magazyn {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
-		return idPosition;
+		return id;
 	}
 
-	public void setId(Long idPosition) {
-		this.idPosition = idPosition;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
