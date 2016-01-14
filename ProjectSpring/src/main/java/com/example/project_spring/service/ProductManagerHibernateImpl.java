@@ -20,9 +20,15 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
-	public void addProduct(Magazyn magazyn) {
+	
+	public void addNewProduct(Magazyn magazyn) {
 		magazyn.setId(null);
 		sessionFactory.getCurrentSession().persist(magazyn);
 	}
+
+	public Magazyn findProductById(Long id){
+		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, id);
+	}
+	
+	
 }
