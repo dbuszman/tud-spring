@@ -1,5 +1,7 @@
 package com.example.project_spring.service;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -28,6 +30,11 @@ public class ProductManagerHibernateImpl implements ProductManager {
 
 	public Magazyn findProductById(Long id){
 		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Magazyn> getAllProducts() {
+		return sessionFactory.getCurrentSession().getNamedQuery("magazyn.all").list();
 	}
 	
 	
