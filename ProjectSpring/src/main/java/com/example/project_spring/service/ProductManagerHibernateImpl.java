@@ -12,6 +12,7 @@ import com.example.project_spring.domain.Magazyn;
 @Component
 @Transactional
 public class ProductManagerHibernateImpl implements ProductManager {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 
@@ -23,15 +24,16 @@ public class ProductManagerHibernateImpl implements ProductManager {
 		this.sessionFactory = sessionFactory;
 	}
 	
+	@Override
 	public void addNewProduct(Magazyn magazyn) {
 		magazyn.setId(null);
 		sessionFactory.getCurrentSession().persist(magazyn);
 	}
-
+	@Override
 	public Magazyn findProductById(Long id){
 		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, id);
 	}
-
+	@Override
 	@SuppressWarnings("unchecked")
 	public List<Magazyn> getAllProducts() {
 		return sessionFactory.getCurrentSession().getNamedQuery("magazyn.all").list();
