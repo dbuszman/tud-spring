@@ -6,7 +6,9 @@ import com.example.project_spring.domain.Magazyn;
 
 public interface ProductManager {
 	
-	void addNewProduct(Magazyn magazyn);
-	Magazyn findProductById(Long id);
-	List<Magazyn> getAllProducts();
+	void addNewPosition(Magazyn magazyn);
+	Magazyn findPositionById(Long id);
+	boolean isPositionWithId(Long id);
+	void removePosition(Magazyn magazyn);
+	List<Magazyn> getAllPositions();
 }

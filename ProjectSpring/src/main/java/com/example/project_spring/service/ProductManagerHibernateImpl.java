@@ -25,17 +25,30 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
-	public void addNewProduct(Magazyn magazyn) {
+	public void addNewPosition(Magazyn magazyn) {
 		magazyn.setId(null);
 		sessionFactory.getCurrentSession().persist(magazyn);
 	}
 	@Override
-	public Magazyn findProductById(Long id){
+	public Magazyn findPositionById(Long id){
 		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, id);
 	}
 	@Override
+	public boolean isPositionWithId(Long id){
+		if (sessionFactory.getCurrentSession().get(Magazyn.class, id) != null){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	@Override
+	public void removePosition(Magazyn magazyn){
+		sessionFactory.getCurrentSession().delete(magazyn);
+	}
+	@Override
 	@SuppressWarnings("unchecked")
-	public List<Magazyn> getAllProducts() {
+	public List<Magazyn> getAllPositions() {
 		return sessionFactory.getCurrentSession().getNamedQuery("magazyn.all").list();
 	}
 	
