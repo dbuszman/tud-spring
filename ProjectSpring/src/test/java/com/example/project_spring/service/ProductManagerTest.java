@@ -2,6 +2,7 @@ package com.example.project_spring.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +110,24 @@ public class ProductManagerTest {
 		assertEquals(MARGIN_2, editedPosition.getMargin());
 	}
 	
-
+	@Test
+	public void isPositionWithIdCheck() {
+		Magazyn magazyn = new Magazyn();
+		magazyn.setName(NAME_1);
+		magazyn.setAmount(AMOUNT_1);
+		magazyn.setMargin(MARGIN_1);
+		
+		productManager.addNewPosition(magazyn);
+		
+		assertTrue(productManager.isPositionWithId(magazyn.getId()));
+		
+		productManager.removePosition(magazyn);
+		
+		assertFalse(productManager.isPositionWithId(magazyn.getId()));
+		
+	}
+	
+		
 	@Test
 	public void removePositionCheck() {
 		
@@ -125,5 +143,11 @@ public class ProductManagerTest {
 		productManager.removePosition(addedPosition);
 		
 		assertFalse(productManager.isPositionWithId(addedPosition.getId()));
+		
+		List<Magazyn> positionsAfterRemove = productManager.getAllPositions();
+		
+		assertEquals(currentPositions, positionsAfterRemove);
 	}
+	
+
 }
