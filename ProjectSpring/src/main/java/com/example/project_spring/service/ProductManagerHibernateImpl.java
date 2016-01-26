@@ -31,6 +31,11 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public void editPosition(Magazyn magazyn) {
+		sessionFactory.getCurrentSession().update(magazyn);
+	}
+	
+	@Override
 	public Magazyn findPositionByObject(Magazyn magazyn){
 		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, magazyn.getId());
 	}

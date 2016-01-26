@@ -30,6 +30,10 @@ public class ProductManagerTest {
 	private final int AMOUNT_1 = 100;
 	private final int MARGIN_1 = 10;
 	
+	private final String NAME_2 = "Dell Inspiron";
+	private final int AMOUNT_2 = 10;
+	private final int MARGIN_2 = 8;
+	
 	private final List<Magazyn> currentPositions = new ArrayList<Magazyn>();
 	
  	@Before
@@ -77,5 +81,30 @@ public class ProductManagerTest {
 		assertEquals(AMOUNT_1, addedPosition.getAmount());
 		assertEquals(MARGIN_1, addedPosition.getMargin());
 
+	}
+	
+	@Test
+	public void editPositionCheck() {
+
+		Magazyn magazyn = new Magazyn();
+		magazyn.setName(NAME_1);
+		magazyn.setAmount(AMOUNT_1);
+		magazyn.setMargin(MARGIN_1);
+		
+		productManager.addNewPosition(magazyn);
+		
+		Magazyn addedPosition = productManager.findPositionByObject(magazyn);
+		
+		addedPosition.setName(NAME_2);
+		addedPosition.setAmount(AMOUNT_2);
+		addedPosition.setMargin(MARGIN_2);
+	
+		productManager.editPosition(addedPosition);
+		
+		Magazyn editedPosition = productManager.findPositionByObject(addedPosition);
+		
+		assertEquals(NAME_2, editedPosition.getName());
+		assertEquals(AMOUNT_2, editedPosition.getAmount());
+		assertEquals(MARGIN_2, editedPosition.getMargin());
 	}
 }
