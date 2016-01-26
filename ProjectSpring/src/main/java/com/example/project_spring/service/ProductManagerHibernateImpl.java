@@ -54,6 +54,12 @@ public class ProductManagerHibernateImpl implements ProductManager {
 			return false;
 		}
 	}
+	
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<Magazyn> findPositionByName(String name) {
+		return sessionFactory.getCurrentSession().getNamedQuery("magazyn.byName").setString("name", name).list();
+	}
 
 	@Override
 	@SuppressWarnings("unchecked")

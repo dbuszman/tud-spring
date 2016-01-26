@@ -36,6 +36,8 @@ public class ProductManagerTest {
 	private final int AMOUNT_2 = 10;
 	private final int MARGIN_2 = 8;
 	
+	private final String PATTERN_1 = "Dell";
+	
 	private final List<Magazyn> currentPositions = new ArrayList<Magazyn>();
 	
  	@Before
@@ -112,6 +114,7 @@ public class ProductManagerTest {
 	
 	@Test
 	public void isPositionWithIdCheck() {
+		
 		Magazyn magazyn = new Magazyn();
 		magazyn.setName(NAME_1);
 		magazyn.setAmount(AMOUNT_1);
@@ -147,6 +150,27 @@ public class ProductManagerTest {
 		List<Magazyn> positionsAfterRemove = productManager.getAllPositions();
 		
 		assertEquals(currentPositions, positionsAfterRemove);
+	}
+	
+	@Test
+	public void findPositionByNameCheck() {
+
+		List<Magazyn> matchingNames = productManager.findPositionByName(PATTERN_1);
+		
+		Magazyn magazyn = new Magazyn();
+		magazyn.setName(PATTERN_1);
+		magazyn.setAmount(AMOUNT_1);
+		magazyn.setMargin(MARGIN_1);
+		
+		productManager.addNewPosition(magazyn);
+		
+		List<Magazyn> matchingNamesAfterAdd = productManager.findPositionByName(PATTERN_1);
+		
+		for(Magazyn matchingNameAfterAdd : matchingNamesAfterAdd) {
+			assertEquals(PATTERN_1, matchingNameAfterAdd.getName());
+		}
+		
+		assertEquals(matchingNames.size() + 1, matchingNamesAfterAdd.size());
 	}
 	
 

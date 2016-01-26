@@ -10,6 +10,7 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "magazyn.all", query = "SELECT m FROM Magazyn m"),
+        @NamedQuery(name = "magazyn.byName", query = "Select m from Magazyn m where m.name = :name")
 })
 
 public class Magazyn {

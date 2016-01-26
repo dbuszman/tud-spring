@@ -12,4 +12,5 @@ public interface ProductManager {
 	Magazyn findPositionByObject(Magazyn magazyn);
 	boolean isPositionWithId(Long id);
 	List<Magazyn> getAllPositions();
+	List<Magazyn> findPositionByName(String name);
 }
