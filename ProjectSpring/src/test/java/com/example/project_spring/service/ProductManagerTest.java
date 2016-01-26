@@ -110,6 +110,12 @@ public class ProductManagerTest {
 		assertEquals(NAME_2, editedPosition.getName());
 		assertEquals(AMOUNT_2, editedPosition.getAmount());
 		assertEquals(MARGIN_2, editedPosition.getMargin());
+		
+		productManager.removePosition(editedPosition);
+		
+		List<Magazyn> positionsAfterRemove = productManager.getAllPositions();
+		
+		assertEquals(currentPositions, positionsAfterRemove);
 	}
 	
 	@Test
