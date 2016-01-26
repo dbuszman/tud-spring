@@ -36,6 +36,11 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public void removePosition(Magazyn magazyn){
+		sessionFactory.getCurrentSession().delete(magazyn);
+	}
+	
+	@Override
 	public Magazyn findPositionByObject(Magazyn magazyn){
 		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, magazyn.getId());
 	}
@@ -49,10 +54,7 @@ public class ProductManagerHibernateImpl implements ProductManager {
 			return false;
 		}
 	}
-	@Override
-	public void removePosition(Magazyn magazyn){
-		sessionFactory.getCurrentSession().delete(magazyn);
-	}
+
 	@Override
 	@SuppressWarnings("unchecked")
 	public List<Magazyn> getAllPositions() {

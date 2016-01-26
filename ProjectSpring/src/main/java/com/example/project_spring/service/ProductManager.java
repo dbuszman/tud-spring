@@ -8,8 +8,8 @@ public interface ProductManager {
 	
 	void addNewPosition(Magazyn magazyn);
 	void editPosition(Magazyn magazyn);
+	void removePosition(Magazyn magazyn);
 	Magazyn findPositionByObject(Magazyn magazyn);
 	boolean isPositionWithId(Long id);
-	void removePosition(Magazyn magazyn);
 	List<Magazyn> getAllPositions();
 }
