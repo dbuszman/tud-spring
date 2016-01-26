@@ -7,7 +7,7 @@ import com.example.project_spring.domain.Magazyn;
 public interface ProductManager {
 	
 	void addNewPosition(Magazyn magazyn);
-	Magazyn findPositionById(Long id);
+	Magazyn findPositionByObject(Magazyn magazyn);
 	boolean isPositionWithId(Long id);
 	void removePosition(Magazyn magazyn);
 	List<Magazyn> getAllPositions();

@@ -17,8 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.project_spring.domain.Magazyn;
 
-//import com.example.project_spring.domain.Magazyn;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/beans.xml" })
 @TransactionConfiguration(transactionManager = "txManager", defaultRollback = false)
@@ -65,8 +63,7 @@ public class ProductManagerTest {
         	
 	@Test
 	public void addNewPositionCheck(){
-		List <Magazyn> beforeAddRecivedProducts = productManager.getAllPositions();
-		int beforeAddSize = beforeAddRecivedProducts.size();
+		
 		Magazyn magazyn = new Magazyn();
 		magazyn.setName(NAME_1);
 		magazyn.setAmount(AMOUNT_1);
@@ -74,9 +71,11 @@ public class ProductManagerTest {
 		
 		productManager.addNewPosition(magazyn);
 		
-		List <Magazyn> recivedProducts = productManager.getAllPositions();
-		int afterAddSize = recivedProducts.size();
+		Magazyn addedPosition = productManager.findPositionByObject(magazyn);
 		
-		assertEquals(afterAddSize -  beforeAddSize, 1);
+		assertEquals(NAME_1, addedPosition.getName());
+		assertEquals(AMOUNT_1, addedPosition.getAmount());
+		assertEquals(MARGIN_1, addedPosition.getMargin());
+
 	}
 }

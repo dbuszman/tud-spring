@@ -29,10 +29,12 @@ public class ProductManagerHibernateImpl implements ProductManager {
 		magazyn.setId(null);
 		sessionFactory.getCurrentSession().persist(magazyn);
 	}
+	
 	@Override
-	public Magazyn findPositionById(Long id){
-		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, id);
+	public Magazyn findPositionByObject(Magazyn magazyn){
+		return (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, magazyn.getId());
 	}
+	
 	@Override
 	public boolean isPositionWithId(Long id){
 		if (sessionFactory.getCurrentSession().get(Magazyn.class, id) != null){
