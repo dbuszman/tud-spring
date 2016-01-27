@@ -53,7 +53,7 @@ public class ProductManagerTest {
 	private final List<Magazyn> currentPositions = new ArrayList<Magazyn>();
 	private final List<ToOrder> currentOrders = new ArrayList<ToOrder>();
 	
- 	@Before
+ 	/*@Before
     public void storeCurrentDatabase() {
 
         List<Magazyn> positions = productManager.getAllPositions();
@@ -100,7 +100,7 @@ public class ProductManagerTest {
         		productManager.removeOrder(order);
         	}
         }
-    }
+    }*/
         	
 	@Test
 	public void addNewPositionCheck(){

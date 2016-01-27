@@ -14,6 +14,8 @@ public interface ProductManager {
 	boolean isPositionWithId(Long id);
 	List<Magazyn> getAllPositions();
 	List<Magazyn> findPositionByName(String name);
+	
+	
 	void addNewOrder(ToOrder order);
 	List<ToOrder> getAllOrders();
 	void removeOrder(ToOrder order);
@@ -22,4 +24,5 @@ public interface ProductManager {
 	boolean isOrderWithId(Long id);
 	void connectOrderWithPosition(ToOrder order, Magazyn magazyn);
 	List<ToOrder> getPositionOrders(Magazyn magazyn);
+	void deleteOrderFromPosition(ToOrder order, Magazyn magazyn);
 }

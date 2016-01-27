@@ -114,6 +114,12 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public void deleteOrderFromPosition(ToOrder order, Magazyn magazyn) {
+		Magazyn position = (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, magazyn.getId());
+		position.getOrders().remove(order);
+	}
+	
+	@Override
 	@SuppressWarnings("unchecked")
 	public List<ToOrder> getAllOrders() {
 		return sessionFactory.getCurrentSession().getNamedQuery("toorder.all").list();
