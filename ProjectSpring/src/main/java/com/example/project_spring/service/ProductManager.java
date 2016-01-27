@@ -18,4 +18,5 @@ public interface ProductManager {
 	List<ToOrder> getAllOrders();
 	void removeOrder(ToOrder order);
 	ToOrder findOrderByObject(ToOrder order);
+	void editOrder(ToOrder order);
 }

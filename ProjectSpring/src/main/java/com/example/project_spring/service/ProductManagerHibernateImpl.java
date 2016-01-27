@@ -77,6 +77,11 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public void editOrder(ToOrder order) {
+		sessionFactory.getCurrentSession().update(order);
+	}
+	
+	@Override
 	public void removeOrder(ToOrder order) {
 		sessionFactory.getCurrentSession().delete(order);
 	}

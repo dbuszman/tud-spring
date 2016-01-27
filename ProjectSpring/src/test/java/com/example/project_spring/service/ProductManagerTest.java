@@ -230,5 +230,33 @@ public class ProductManagerTest {
 
 	}
 	
+	@Test
+	public void editOrderCheck() {
+
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.addNewOrder(order);
+		
+		ToOrder addedOrder = productManager.findOrderByObject(order);
+		
+		addedOrder.setOrderedAmount(ORDEREDAMOUNT_2);
+		addedOrder.setPrice(PRICE_2);
+	
+		productManager.editOrder(addedOrder);
+		
+		ToOrder editedOrder = productManager.findOrderByObject(addedOrder);
+		
+		assertEquals(ORDEREDAMOUNT_2, editedOrder.getOrderedAmount());
+		assertEquals(PRICE_2, editedOrder.getPrice(), EPSILON);
+		
+		productManager.removeOrder(editedOrder);
+		
+		List<ToOrder> ordersAfterRemove = productManager.getAllOrders();
+		
+		assertEquals(currentOrders, ordersAfterRemove);
+	}
+	
 
 }
