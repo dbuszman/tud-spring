@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.project_spring.domain.Magazyn;
+import com.example.project_spring.domain.ToOrder;
 
 @Component
 @Transactional
@@ -23,6 +24,7 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
 	
 	@Override
 	public void addNewPosition(Magazyn magazyn) {
@@ -67,5 +69,22 @@ public class ProductManagerHibernateImpl implements ProductManager {
 		return sessionFactory.getCurrentSession().getNamedQuery("magazyn.all").list();
 	}
 	
+	
+	@Override
+	public void addNewOrder(ToOrder order) {
+		order.setId(null);
+		sessionFactory.getCurrentSession().persist(order);
+	}
+	
+	@Override
+	public void removeOrder(ToOrder order) {
+		sessionFactory.getCurrentSession().delete(order);
+	}
+	
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<ToOrder> getAllOrders() {
+		return sessionFactory.getCurrentSession().getNamedQuery("toorder.all").list();
+	}
 	
 }

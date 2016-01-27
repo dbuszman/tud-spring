@@ -18,6 +18,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.project_spring.domain.Magazyn;
+import com.example.project_spring.domain.ToOrder;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/beans.xml" })
@@ -39,13 +40,20 @@ public class ProductManagerTest {
 	private final String PATTERN_1 = "Dell";
 	
 	private final List<Magazyn> currentPositions = new ArrayList<Magazyn>();
+	private final List<ToOrder> currentOrders = new ArrayList<ToOrder>();
 	
  	@Before
     public void storeCurrentDatabase() {
 
         List<Magazyn> positions = productManager.getAllPositions();
+        List<ToOrder> orders = productManager.getAllOrders();
+        
 		for(Magazyn position : positions) {
 			currentPositions.add(position);
+		}
+		
+		for(ToOrder order : orders) {
+			currentOrders.add(order);
 		}
         
     }
@@ -54,6 +62,7 @@ public class ProductManagerTest {
     public void cleanUpDatabase() {
 
     	List<Magazyn> afterTestPositions = productManager.getAllPositions();
+    	List<ToOrder> afterTestOrders = productManager.getAllOrders();
 
         for(Magazyn position : afterTestPositions) {
         	boolean flag = false;
@@ -65,6 +74,19 @@ public class ProductManagerTest {
         	}
         	if (flag == false){
         		productManager.removePosition(position);
+        	}
+        }
+        
+        for(ToOrder order : afterTestOrders) {
+        	boolean flag = false;
+        	for(ToOrder order2 : currentOrders){
+        		if (order.getId() == order2.getId()){
+        			flag = true;
+        			break;
+        		}
+        	}
+        	if (flag == false){
+        		productManager.removeOrder(order);
         	}
         }
     }
