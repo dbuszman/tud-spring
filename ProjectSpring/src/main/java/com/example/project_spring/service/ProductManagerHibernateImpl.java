@@ -82,6 +82,11 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public ToOrder findOrderByObject(ToOrder order){
+		return (ToOrder) sessionFactory.getCurrentSession().get(ToOrder.class, order.getId());
+	}
+	
+	@Override
 	@SuppressWarnings("unchecked")
 	public List<ToOrder> getAllOrders() {
 		return sessionFactory.getCurrentSession().getNamedQuery("toorder.all").list();

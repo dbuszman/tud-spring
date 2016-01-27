@@ -39,6 +39,17 @@ public class ProductManagerTest {
 	
 	private final String PATTERN_1 = "Dell";
 	
+	
+	
+	private final static int ORDEREDAMOUNT_1 = 5;
+	private final static float PRICE_1 = 500;
+	
+	private final static int ORDEREDAMOUNT_2 = 5;
+	private final static float PRICE_2 = 500;
+	
+	private final static double EPSILON = 1e-15;
+	
+	
 	private final List<Magazyn> currentPositions = new ArrayList<Magazyn>();
 	private final List<ToOrder> currentOrders = new ArrayList<ToOrder>();
 	
@@ -199,6 +210,24 @@ public class ProductManagerTest {
 		}
 		
 		assertEquals(matchingNames.size() + 1, matchingNamesAfterAdd.size());
+	}
+	
+	
+	
+	@Test
+	public void addNewOrderCheck() {
+		
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.addNewOrder(order);
+		
+		ToOrder addedOrder = productManager.findOrderByObject(order);
+		
+		assertEquals(ORDEREDAMOUNT_1, addedOrder.getOrderedAmount());
+		assertEquals(PRICE_1, addedOrder.getPrice(), EPSILON);
+
 	}
 	
 

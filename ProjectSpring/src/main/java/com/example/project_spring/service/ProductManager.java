@@ -17,4 +17,5 @@ public interface ProductManager {
 	void addNewOrder(ToOrder order);
 	List<ToOrder> getAllOrders();
 	void removeOrder(ToOrder order);
+	ToOrder findOrderByObject(ToOrder order);
 }
