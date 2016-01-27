@@ -19,4 +19,5 @@ public interface ProductManager {
 	void removeOrder(ToOrder order);
 	ToOrder findOrderByObject(ToOrder order);
 	void editOrder(ToOrder order);
+	boolean isOrderWithId(Long id);
 }

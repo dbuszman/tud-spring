@@ -92,6 +92,16 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public boolean isOrderWithId(Long id){
+		if (sessionFactory.getCurrentSession().get(ToOrder.class, id) != null){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	@Override
 	@SuppressWarnings("unchecked")
 	public List<ToOrder> getAllOrders() {
 		return sessionFactory.getCurrentSession().getNamedQuery("toorder.all").list();

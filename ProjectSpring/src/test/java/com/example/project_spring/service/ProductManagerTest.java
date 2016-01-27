@@ -258,5 +258,25 @@ public class ProductManagerTest {
 		assertEquals(currentOrders, ordersAfterRemove);
 	}
 	
+	@Test
+	public void removeOrderCheck() {
+		
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.addNewOrder(order);
+		
+		ToOrder addedOrder = productManager.findOrderByObject(order);
+		
+		productManager.removeOrder(addedOrder);
+		
+		assertFalse(productManager.isOrderWithId(addedOrder.getId()));
+		
+		List<ToOrder> ordersAfterRemove = productManager.getAllOrders();
+		
+		assertEquals(currentOrders, ordersAfterRemove);
+	}
+	
 
 }
