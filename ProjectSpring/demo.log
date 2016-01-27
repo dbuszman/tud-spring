@@ -14754,3 +14754,1182 @@ Caused by: org.hibernate.HibernateException: Errors in named queries: magazyn.by
 2016-01-27 08:13:54,501 INFO  [TableMetadata]  - foreign keys: []
 2016-01-27 08:13:54,501 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
 2016-01-27 08:13:54,772 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:41:05,400 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:41:05,404 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:41:05,405 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:41:05,407 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:41:05,409 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:41:05,478 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:41:05,488 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:41:05,499 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:41:05,530 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:41:05,530 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:41:05,530 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:41:05,530 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:41:05,557 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:41:05,560 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:41:05,564 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:41:05,849 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:41:05,872 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:41:05,872 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:41:05,874 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:41:05,875 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:41:05,875 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:41:05,875 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:41:05,875 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:41:05,876 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:41:05,876 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:41:05,876 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:41:05,876 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:41:05,877 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:41:05,877 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:41:05,877 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:41:05,877 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:41:05,877 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:41:05,879 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:41:05,879 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:41:05,879 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:41:05,879 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:41:05,879 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:41:05,879 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:41:05,880 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:41:05,880 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:41:05,883 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:41:05,883 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:41:05,883 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:41:05,884 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:41:05,884 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:41:05,884 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:41:05,895 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:41:05,899 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@6b58b9e9
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@f14a7d4
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@52e7a6b2
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@79c97cb
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@79c97cb
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@2d9caaeb
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@2d9caaeb
+2016-01-27 08:41:05,900 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@42a15bdc
+2016-01-27 08:41:06,016 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:41:06,152 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:41:06,174 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:41:06,175 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:41:06,175 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:41:06,175 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:41:06,180 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:41:06,181 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:41:06,181 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:41:06,181 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:41:06,186 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:41:06,186 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:41:06,186 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:41:06,186 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:41:06,475 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:41:38,856 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:41:38,860 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:41:38,861 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:41:38,863 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:41:38,865 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:41:38,935 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:41:38,945 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:41:38,957 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:41:38,994 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:41:38,994 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:41:38,994 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:41:38,995 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:41:39,033 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:41:39,037 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:41:39,042 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:41:39,328 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:41:39,353 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:41:39,353 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:41:39,355 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:41:39,356 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:41:39,356 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:41:39,356 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:41:39,356 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:41:39,356 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:41:39,357 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:41:39,357 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:41:39,357 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:41:39,357 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:41:39,357 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:41:39,358 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:41:39,358 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:41:39,358 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:41:39,359 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:41:39,359 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:41:39,359 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:41:39,359 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:41:39,359 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:41:39,359 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:41:39,360 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:41:39,360 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:41:39,363 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:41:39,363 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:41:39,363 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:41:39,364 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:41:39,364 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:41:39,364 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:41:39,376 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:41:39,380 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:41:39,380 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:41:39,380 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:41:39,380 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:41:39,381 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 08:41:39,381 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 08:41:39,381 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 08:41:39,381 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:41:39,381 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 08:41:39,499 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:41:39,646 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:41:39,668 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:41:39,668 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:41:39,669 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:41:39,669 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:41:39,675 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:41:39,675 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:41:39,675 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:41:39,675 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:41:39,679 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:41:39,679 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:41:39,679 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:41:39,680 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:41:39,943 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:46:06,164 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:46:06,168 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:46:06,169 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:46:06,171 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:46:06,173 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:46:06,245 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:46:06,254 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:46:06,266 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:46:06,298 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:46:06,298 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:46:06,298 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:46:06,299 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:46:06,326 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:46:06,329 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:46:06,332 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:46:06,623 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:46:06,645 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:46:06,645 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:46:06,646 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:46:06,647 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:46:06,647 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:46:06,647 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:46:06,647 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:46:06,647 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:46:06,648 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:46:06,648 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:46:06,648 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:46:06,648 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:46:06,648 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:46:06,648 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:46:06,649 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:46:06,649 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:46:06,650 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:46:06,650 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:46:06,650 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:46:06,650 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:46:06,650 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:46:06,650 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:46:06,651 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:46:06,651 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:46:06,653 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:46:06,654 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:46:06,654 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:46:06,654 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:46:06,654 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:46:06,654 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:46:06,666 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:46:06,669 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:46:06,669 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:46:06,669 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:46:06,669 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:46:06,669 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 08:46:06,669 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 08:46:06,670 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 08:46:06,670 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:46:06,670 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 08:46:06,783 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:46:06,921 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:46:06,952 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:46:06,952 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:46:06,952 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:46:06,952 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:46:06,959 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:46:06,960 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:46:06,960 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:46:06,960 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:46:06,964 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:46:06,964 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:46:06,964 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:46:06,964 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:46:07,233 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:46:43,730 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:46:43,734 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:46:43,736 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:46:43,738 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:46:43,739 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:46:43,808 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:46:43,818 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:46:43,830 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:46:43,868 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:46:43,869 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:46:43,869 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:46:43,869 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:46:43,905 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:46:43,910 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:46:43,915 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:46:44,197 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:46:44,212 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:46:44,212 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:46:44,213 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:46:44,214 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:46:44,214 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:46:44,214 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:46:44,214 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:46:44,214 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:46:44,214 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:46:44,215 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:46:44,216 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:46:44,216 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:46:44,216 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:46:44,217 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:46:44,217 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:46:44,217 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:46:44,217 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:46:44,217 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:46:44,219 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:46:44,220 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:46:44,220 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:46:44,220 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:46:44,220 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:46:44,220 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:46:44,232 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:46:44,235 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 08:46:44,349 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:46:44,515 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:46:44,539 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:46:44,540 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:46:44,540 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:46:44,540 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:46:44,548 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:46:44,548 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:46:44,548 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:46:44,549 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:46:44,553 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:46:44,553 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:46:44,553 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:46:44,553 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:46:44,798 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:47:41,128 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:47:41,132 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:47:41,133 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:47:41,135 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:47:41,137 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:47:41,206 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:47:41,216 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:47:41,228 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:47:41,260 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:47:41,261 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:47:41,261 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:47:41,261 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:47:41,289 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:47:41,292 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:47:41,295 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:47:41,567 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:47:41,581 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:47:41,581 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:47:41,583 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:47:41,583 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:47:41,583 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:47:41,584 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:47:41,584 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:47:41,584 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:47:41,584 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:47:41,584 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:47:41,584 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:47:41,585 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:47:41,585 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:47:41,585 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:47:41,585 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:47:41,585 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:47:41,586 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:47:41,586 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:47:41,586 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:47:41,587 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:47:41,587 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:47:41,587 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:47:41,587 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:47:41,587 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:47:41,589 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:47:41,590 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:47:41,590 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:47:41,590 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:47:41,590 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:47:41,590 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:47:41,602 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:47:41,605 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:47:41,605 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:47:41,605 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:47:41,605 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:47:41,605 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 08:47:41,606 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 08:47:41,606 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 08:47:41,606 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:47:41,606 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 08:47:41,720 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:47:41,853 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:47:41,872 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:47:41,872 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:47:41,872 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:47:41,872 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:47:41,876 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:47:41,876 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:47:41,876 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:47:41,876 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:47:41,879 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:47:41,879 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:47:41,879 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:47:41,879 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:47:42,138 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:52:15,399 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:52:15,403 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:52:15,404 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:52:15,406 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:52:15,408 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:52:15,478 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:52:15,487 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:52:15,499 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:52:15,534 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:52:15,534 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:52:15,534 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:52:15,534 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:52:15,563 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:52:15,566 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:52:15,570 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:52:15,842 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:52:15,857 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:52:15,857 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:52:15,858 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:52:15,859 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:52:15,859 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:52:15,859 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:52:15,859 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:52:15,859 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:52:15,859 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:52:15,859 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:52:15,860 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:52:15,860 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:52:15,860 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:52:15,860 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:52:15,860 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:52:15,860 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:52:15,861 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:52:15,861 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:52:15,862 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:52:15,862 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:52:15,862 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:52:15,862 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:52:15,862 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:52:15,863 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:52:15,865 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:52:15,865 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:52:15,865 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:52:15,865 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:52:15,865 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:52:15,865 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:52:15,877 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:52:15,880 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:52:15,880 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:52:15,880 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:52:15,880 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:52:15,880 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 08:52:15,881 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 08:52:15,881 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 08:52:15,881 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:52:15,881 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 08:52:15,992 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:52:16,128 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:52:16,146 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:52:16,147 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:52:16,147 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:52:16,147 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:52:16,150 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:52:16,150 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:52:16,150 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:52:16,150 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:52:16,153 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:52:16,153 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:52:16,153 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:52:16,153 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:52:16,407 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 08:55:05,945 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 08:55:05,949 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 08:55:05,950 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 08:55:05,952 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 08:55:05,954 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 08:55:06,023 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 08:55:06,033 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 08:55:06,045 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 08:55:06,093 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 08:55:06,093 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 08:55:06,094 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 08:55:06,094 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 08:55:06,122 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 08:55:06,125 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 08:55:06,129 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 08:55:06,419 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:55:06,440 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 08:55:06,440 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 08:55:06,441 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 08:55:06,442 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 08:55:06,442 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 08:55:06,443 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 08:55:06,443 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 08:55:06,443 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 08:55:06,443 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 08:55:06,443 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 08:55:06,443 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 08:55:06,444 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 08:55:06,444 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 08:55:06,444 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 08:55:06,444 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 08:55:06,444 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 08:55:06,445 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 08:55:06,446 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 08:55:06,446 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 08:55:06,446 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 08:55:06,446 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 08:55:06,446 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 08:55:06,447 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 08:55:06,447 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 08:55:06,449 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 08:55:06,449 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 08:55:06,450 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 08:55:06,450 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 08:55:06,450 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 08:55:06,450 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 08:55:06,462 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 08:55:06,465 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 08:55:06,466 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 08:55:06,466 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 08:55:06,577 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 08:55:06,711 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 08:55:06,730 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 08:55:06,730 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 08:55:06,730 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:55:06,731 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 08:55:06,734 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 08:55:06,734 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 08:55:06,734 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 08:55:06,735 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 08:55:06,737 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 08:55:06,737 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 08:55:06,737 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 08:55:06,737 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 08:55:06,995 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:06:26,388 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:06:26,392 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:06:26,393 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:06:26,395 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:06:26,396 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:06:26,468 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:06:26,477 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:06:26,489 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:06:26,521 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:06:26,522 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:06:26,522 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:06:26,522 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:06:26,549 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:06:26,552 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:06:26,555 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:06:26,834 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:06:26,849 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:06:26,849 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:06:26,850 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:06:26,851 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:06:26,851 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:06:26,851 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:06:26,851 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:06:26,851 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:06:26,852 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:06:26,852 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:06:26,852 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:06:26,852 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:06:26,852 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:06:26,853 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:06:26,853 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:06:26,853 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:06:26,854 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:06:26,854 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:06:26,854 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:06:26,854 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:06:26,854 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:06:26,854 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:06:26,855 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:06:26,855 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:06:26,857 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:06:26,857 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:06:26,857 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:06:26,858 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:06:26,858 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:06:26,858 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:06:26,869 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:06:26,873 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 09:06:26,986 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:06:27,122 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:06:27,131 INFO  [DatabaseMetadata]  - table not found: Magazyn
+2016-01-27 09:06:27,135 INFO  [DatabaseMetadata]  - table not found: Magazyn_ToOrder
+2016-01-27 09:06:27,136 INFO  [DatabaseMetadata]  - table not found: ToOrder
+2016-01-27 09:06:27,138 INFO  [DatabaseMetadata]  - table not found: Magazyn
+2016-01-27 09:06:27,139 INFO  [DatabaseMetadata]  - table not found: Magazyn_ToOrder
+2016-01-27 09:06:27,140 INFO  [DatabaseMetadata]  - table not found: ToOrder
+2016-01-27 09:06:27,395 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:08:01,496 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:08:01,501 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:08:01,501 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:08:01,503 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:08:01,505 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:08:01,576 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:08:01,586 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:08:01,598 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:08:01,635 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:08:01,635 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:08:01,635 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:08:01,635 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:08:01,663 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:08:01,667 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:08:01,671 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:08:01,961 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:08:01,975 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:08:01,975 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:08:01,977 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:08:01,977 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:08:01,977 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:08:01,978 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:08:01,978 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:08:01,978 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:08:01,978 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:08:01,978 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:08:01,978 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:08:01,979 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:08:01,979 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:08:01,979 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:08:01,979 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:08:01,979 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:08:01,980 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:08:01,980 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:08:01,980 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:08:01,980 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:08:01,981 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:08:01,981 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:08:01,981 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:08:01,981 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:08:01,983 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:08:01,984 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:08:01,984 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:08:01,984 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:08:01,984 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:08:01,984 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:08:01,996 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 09:08:02,000 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:08:02,001 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 09:08:02,114 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:08:02,250 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:08:02,298 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:08:02,298 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:08:02,299 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:08:02,299 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:08:02,304 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:08:02,304 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:08:02,305 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:08:02,305 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:08:02,309 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:08:02,309 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:08:02,309 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:08:02,309 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:08:02,565 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:09:23,641 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:09:23,646 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:09:23,647 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:09:23,649 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:09:23,650 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:09:23,720 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:09:23,729 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:09:23,742 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:09:23,779 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:09:23,779 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:09:23,779 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:09:23,779 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:09:23,808 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:09:23,811 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:09:23,815 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:09:24,107 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:09:24,132 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:09:24,133 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:09:24,134 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:09:24,135 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:09:24,135 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:09:24,135 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:09:24,135 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:09:24,135 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:09:24,136 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:09:24,136 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:09:24,136 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:09:24,136 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:09:24,136 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:09:24,136 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:09:24,137 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:09:24,137 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:09:24,138 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:09:24,138 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:09:24,138 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:09:24,138 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:09:24,138 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:09:24,138 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:09:24,139 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:09:24,139 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:09:24,141 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:09:24,141 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:09:24,141 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:09:24,142 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:09:24,142 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:09:24,142 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:09:24,153 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:09:24,156 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:09:24,156 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:09:24,156 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:09:24,157 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:09:24,157 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 09:09:24,157 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 09:09:24,157 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 09:09:24,157 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:09:24,157 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 09:09:24,271 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:09:24,405 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:09:24,430 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:09:24,430 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:09:24,430 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:09:24,430 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:09:24,436 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:09:24,436 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:09:24,436 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:09:24,436 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:09:24,440 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:09:24,440 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:09:24,440 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:09:24,440 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:09:24,695 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:09:43,637 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:09:43,641 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:09:43,642 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:09:43,644 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:09:43,646 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:09:43,713 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:09:43,723 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:09:43,735 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:09:43,767 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:09:43,768 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:09:43,768 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:09:43,768 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:09:43,795 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:09:43,798 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:09:43,801 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:09:44,076 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:09:44,091 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:09:44,091 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:09:44,092 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:09:44,093 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:09:44,093 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:09:44,093 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:09:44,094 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:09:44,094 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:09:44,094 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:09:44,094 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:09:44,094 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:09:44,095 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:09:44,095 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:09:44,095 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:09:44,095 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:09:44,095 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:09:44,096 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:09:44,096 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:09:44,096 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:09:44,096 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:09:44,097 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:09:44,097 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:09:44,097 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:09:44,097 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:09:44,099 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:09:44,100 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:09:44,100 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:09:44,100 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:09:44,100 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:09:44,100 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:09:44,111 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:09:44,114 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:09:44,115 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 09:09:44,229 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:09:44,430 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:09:44,463 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:09:44,463 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:09:44,464 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:09:44,464 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:09:44,469 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:09:44,469 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:09:44,469 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:09:44,470 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:09:44,473 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:09:44,474 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:09:44,474 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:09:44,474 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:09:44,739 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:10:30,029 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:10:30,033 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:10:30,034 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:10:30,036 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:10:30,038 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:10:30,108 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:10:30,117 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:10:30,129 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:10:30,162 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:10:30,163 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:10:30,163 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:10:30,163 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:10:30,190 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:10:30,193 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:10:30,196 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:10:30,489 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:10:30,514 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:10:30,514 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:10:30,516 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:10:30,517 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:10:30,517 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:10:30,517 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:10:30,517 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:10:30,517 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:10:30,518 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:10:30,518 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:10:30,518 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:10:30,519 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:10:30,519 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:10:30,519 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:10:30,519 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:10:30,520 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:10:30,521 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:10:30,521 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:10:30,521 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:10:30,521 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:10:30,522 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:10:30,522 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:10:30,522 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:10:30,523 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:10:30,525 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:10:30,525 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:10:30,525 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:10:30,526 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:10:30,526 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:10:30,526 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:10:30,539 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:10:30,542 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:10:30,542 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:10:30,542 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:10:30,543 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:10:30,543 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 09:10:30,543 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 09:10:30,543 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 09:10:30,543 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:10:30,543 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 09:10:30,658 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:10:30,793 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:10:30,815 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:10:30,816 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:10:30,816 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:10:30,816 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:10:30,820 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:10:30,820 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:10:30,820 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:10:30,820 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:10:30,826 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:10:30,826 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:10:30,826 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:10:30,826 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:10:31,082 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:11:19,082 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:11:19,086 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:11:19,087 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:11:19,089 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:11:19,092 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:11:19,174 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:11:19,184 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:11:19,196 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:11:19,231 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:11:19,231 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:11:19,231 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:11:19,232 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:11:19,260 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:11:19,263 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:11:19,267 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:11:19,557 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:11:19,576 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:11:19,576 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:11:19,577 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:11:19,578 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:11:19,578 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:11:19,579 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:11:19,579 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:11:19,579 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:11:19,579 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:11:19,579 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:11:19,579 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:11:19,580 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:11:19,580 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:11:19,580 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:11:19,580 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:11:19,580 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:11:19,581 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:11:19,581 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:11:19,582 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:11:19,582 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:11:19,582 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:11:19,582 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:11:19,583 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:11:19,583 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:11:19,586 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:11:19,586 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:11:19,586 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:11:19,586 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:11:19,586 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:11:19,586 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:11:19,598 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:11:19,601 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@26df6e3a
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4a3631f8
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@6b58b9e9
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f14a7d4
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@52e7a6b2
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:11:19,602 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@79c97cb
+2016-01-27 09:11:19,718 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:11:19,855 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:11:19,880 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:11:19,880 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:11:19,880 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:11:19,880 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:11:19,885 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:11:19,885 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:11:19,885 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:11:19,885 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:11:19,889 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:11:19,889 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:11:19,889 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:11:19,890 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:11:20,169 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:11:36,793 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:11:36,797 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:11:36,798 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:11:36,800 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:11:36,802 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:11:36,873 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:11:36,883 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:11:36,896 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:11:36,928 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:11:36,928 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:11:36,928 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:11:36,929 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:11:36,955 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:11:36,958 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:11:36,962 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:11:37,255 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:11:37,276 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:11:37,276 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:11:37,277 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:11:37,278 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:11:37,278 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:11:37,278 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:11:37,279 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:11:37,279 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:11:37,279 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:11:37,279 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:11:37,279 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:11:37,279 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:11:37,280 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:11:37,280 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:11:37,280 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:11:37,280 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:11:37,281 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:11:37,281 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:11:37,281 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:11:37,281 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:11:37,281 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:11:37,281 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:11:37,282 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:11:37,282 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:11:37,284 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:11:37,285 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:11:37,285 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:11:37,285 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:11:37,285 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:11:37,285 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:11:37,297 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:11:37,300 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@6b58b9e9
+2016-01-27 09:11:37,300 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@f14a7d4
+2016-01-27 09:11:37,300 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@52e7a6b2
+2016-01-27 09:11:37,300 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:11:37,300 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@79c97cb
+2016-01-27 09:11:37,300 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@79c97cb
+2016-01-27 09:11:37,301 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@2d9caaeb
+2016-01-27 09:11:37,301 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@2d9caaeb
+2016-01-27 09:11:37,301 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@42a15bdc
+2016-01-27 09:11:37,411 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:11:37,545 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:11:37,566 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:11:37,567 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:11:37,567 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:11:37,567 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:11:37,572 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:11:37,572 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:11:37,572 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:11:37,572 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:11:37,577 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:11:37,577 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:11:37,577 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:11:37,577 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:11:37,937 INFO  [SessionFactoryImpl]  - closing
+2016-01-27 09:12:25,347 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2016-01-27 09:12:25,351 INFO  [Environment]  - Hibernate 3.6.6.Final
+2016-01-27 09:12:25,352 INFO  [Environment]  - hibernate.properties not found
+2016-01-27 09:12:25,354 INFO  [Environment]  - Bytecode provider name : javassist
+2016-01-27 09:12:25,356 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2016-01-27 09:12:25,427 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.ToOrder
+2016-01-27 09:12:25,437 INFO  [QueryBinder]  - Binding Named query: toorder.all => Select t from ToOrder t
+2016-01-27 09:12:25,450 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.ToOrder on table ToOrder
+2016-01-27 09:12:25,484 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.project_spring.domain.Magazyn
+2016-01-27 09:12:25,484 INFO  [QueryBinder]  - Binding Named query: magazyn.all => SELECT m FROM Magazyn m
+2016-01-27 09:12:25,484 INFO  [QueryBinder]  - Binding Named query: magazyn.byName => Select m from Magazyn m where m.name = :name
+2016-01-27 09:12:25,485 INFO  [EntityBinder]  - Bind entity com.example.project_spring.domain.Magazyn on table Magazyn
+2016-01-27 09:12:25,514 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2016-01-27 09:12:25,518 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-01-27 09:12:25,524 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-01-27 09:12:25,803 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:12:25,818 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.3.3
+      major : 2
+      minor : 3
+2016-01-27 09:12:25,818 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2016-01-27 09:12:25,819 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-01-27 09:12:25,819 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - JDBC batch size: 15
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2016-01-27 09:12:25,820 INFO  [SettingsFactory]  - Connection release mode: auto
+2016-01-27 09:12:25,821 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2016-01-27 09:12:25,821 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2016-01-27 09:12:25,821 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2016-01-27 09:12:25,821 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2016-01-27 09:12:25,821 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-01-27 09:12:25,822 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2016-01-27 09:12:25,822 INFO  [SettingsFactory]  - Query language substitutions: {}
+2016-01-27 09:12:25,822 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2016-01-27 09:12:25,822 INFO  [SettingsFactory]  - Second-level cache: enabled
+2016-01-27 09:12:25,822 INFO  [SettingsFactory]  - Query cache: disabled
+2016-01-27 09:12:25,823 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-01-27 09:12:25,823 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2016-01-27 09:12:25,823 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2016-01-27 09:12:25,825 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2016-01-27 09:12:25,826 INFO  [SettingsFactory]  - Statistics: disabled
+2016-01-27 09:12:25,826 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2016-01-27 09:12:25,826 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2016-01-27 09:12:25,826 INFO  [SettingsFactory]  - Named query checking : enabled
+2016-01-27 09:12:25,826 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-01-27 09:12:25,838 INFO  [SessionFactoryImpl]  - building session factory
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@6b58b9e9
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@f14a7d4
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@52e7a6b2
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29a5f4e7
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@79c97cb
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@79c97cb
+2016-01-27 09:12:25,841 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@2d9caaeb
+2016-01-27 09:12:25,842 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@2d9caaeb
+2016-01-27 09:12:25,842 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@42a15bdc
+2016-01-27 09:12:25,953 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2016-01-27 09:12:26,100 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2016-01-27 09:12:26,126 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN
+2016-01-27 09:12:26,126 INFO  [TableMetadata]  - columns: [amount, margin, name, id]
+2016-01-27 09:12:26,126 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:12:26,126 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10111_10112]
+2016-01-27 09:12:26,131 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.MAGAZYN_TOORDER
+2016-01-27 09:12:26,132 INFO  [TableMetadata]  - columns: [orders_id, magazyn_id]
+2016-01-27 09:12:26,132 INFO  [TableMetadata]  - foreign keys: [fk483e97f58ef99ffa, fk483e97f52180ac28]
+2016-01-27 09:12:26,132 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10117_10121, sys_idx_10133, sys_idx_10129]
+2016-01-27 09:12:26,136 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.TOORDER
+2016-01-27 09:12:26,136 INFO  [TableMetadata]  - columns: [orderedamount, price, id]
+2016-01-27 09:12:26,136 INFO  [TableMetadata]  - foreign keys: []
+2016-01-27 09:12:26,136 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10124_10125]
+2016-01-27 09:12:26,490 INFO  [SessionFactoryImpl]  - closing

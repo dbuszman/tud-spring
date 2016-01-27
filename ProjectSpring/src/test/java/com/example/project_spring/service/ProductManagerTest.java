@@ -123,6 +123,8 @@ public class ProductManagerTest {
 	@Test
 	public void editPositionCheck() {
 
+		List<Magazyn> positionsBefore = productManager.getAllPositions();
+		
 		Magazyn magazyn = new Magazyn();
 		magazyn.setName(NAME_1);
 		magazyn.setAmount(AMOUNT_1);
@@ -148,7 +150,7 @@ public class ProductManagerTest {
 		
 		List<Magazyn> positionsAfterRemove = productManager.getAllPositions();
 		
-		assertEquals(currentPositions, positionsAfterRemove);
+		assertEquals(positionsBefore, positionsAfterRemove);
 	}
 	
 	@Test
@@ -173,6 +175,8 @@ public class ProductManagerTest {
 	@Test
 	public void removePositionCheck() {
 		
+		List<Magazyn> positionsBefore = productManager.getAllPositions();
+		
 		Magazyn magazyn = new Magazyn();
 		magazyn.setName(NAME_1);
 		magazyn.setAmount(AMOUNT_1);
@@ -188,7 +192,7 @@ public class ProductManagerTest {
 		
 		List<Magazyn> positionsAfterRemove = productManager.getAllPositions();
 		
-		assertEquals(currentPositions, positionsAfterRemove);
+		assertEquals(positionsBefore, positionsAfterRemove);
 	}
 	
 	@Test
@@ -233,6 +237,8 @@ public class ProductManagerTest {
 	@Test
 	public void editOrderCheck() {
 
+		List<ToOrder> ordersBefore = productManager.getAllOrders();
+		
 		ToOrder order = new ToOrder();
 		order.setOrderedAmount(ORDEREDAMOUNT_1);
 		order.setPrice(PRICE_1);
@@ -255,11 +261,13 @@ public class ProductManagerTest {
 		
 		List<ToOrder> ordersAfterRemove = productManager.getAllOrders();
 		
-		assertEquals(currentOrders, ordersAfterRemove);
+		assertEquals(ordersBefore, ordersAfterRemove);
 	}
 	
 	@Test
 	public void removeOrderCheck() {
+		
+		List<ToOrder> ordersBefore = productManager.getAllOrders();
 		
 		ToOrder order = new ToOrder();
 		order.setOrderedAmount(ORDEREDAMOUNT_1);
@@ -275,8 +283,35 @@ public class ProductManagerTest {
 		
 		List<ToOrder> ordersAfterRemove = productManager.getAllOrders();
 		
-		assertEquals(currentOrders, ordersAfterRemove);
+		assertEquals(ordersBefore, ordersAfterRemove);
 	}
 	
+	@Test
+	public void connectOrderWithPositionCheck() {
+		
+		Magazyn magazyn = new Magazyn();
+		magazyn.setName(PATTERN_1);
+		magazyn.setAmount(AMOUNT_1);
+		magazyn.setMargin(MARGIN_1);
+		
+		productManager.addNewPosition(magazyn);
+		
+		int connectedOrdersWithPositions = productManager.getPositionOrders(magazyn).size();
+		
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.connectOrderWithPosition(order, magazyn);
+		
+		List<ToOrder> orderedPositions = productManager.getPositionOrders(magazyn);
+
+		for (ToOrder orderedPosition : orderedPositions) {
+			assertEquals(ORDEREDAMOUNT_1, orderedPosition.getOrderedAmount());
+			assertEquals(PRICE_1, orderedPosition.getPrice(), EPSILON);
+		}
+		
+		assertEquals(connectedOrdersWithPositions + 1, orderedPositions.size());
+	}
 
 }

@@ -20,4 +20,6 @@ public interface ProductManager {
 	ToOrder findOrderByObject(ToOrder order);
 	void editOrder(ToOrder order);
 	boolean isOrderWithId(Long id);
+	void connectOrderWithPosition(ToOrder order, Magazyn magazyn);
+	List<ToOrder> getPositionOrders(Magazyn magazyn);
 }

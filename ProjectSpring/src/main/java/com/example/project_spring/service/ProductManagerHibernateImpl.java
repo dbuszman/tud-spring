@@ -102,6 +102,18 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	@Override
+	public void connectOrderWithPosition(ToOrder order, Magazyn magazyn) {
+		Magazyn position = (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, magazyn.getId());
+		position.getOrders().add(order);
+	}
+	
+	@Override
+	public List<ToOrder> getPositionOrders(Magazyn magazyn) {
+		Magazyn position = (Magazyn) sessionFactory.getCurrentSession().get(Magazyn.class, magazyn.getId());
+		return position.getOrders();
+	}
+	
+	@Override
 	@SuppressWarnings("unchecked")
 	public List<ToOrder> getAllOrders() {
 		return sessionFactory.getCurrentSession().getNamedQuery("toorder.all").list();
