@@ -1,11 +1,17 @@
 package com.example.project_spring.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 @Entity
 @NamedQueries({
@@ -22,6 +28,8 @@ public class Magazyn {
 	private int amount;
 	
 	private int margin;
+
+	private List<ToOrder> orders = new ArrayList<ToOrder>();
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -55,5 +63,14 @@ public class Magazyn {
 
 	public void setMargin(int margin) {
 		this.margin = margin;
+	}
+	
+	// Be careful here, both with lazy and eager fetch type
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	public List<ToOrder> getOrders() {
+		return orders;
+	}
+	public void setOrders(List<ToOrder> orders) {
+		this.orders = orders;
 	}
 }
