@@ -25,7 +25,7 @@ public class ProductManagerHibernateImpl implements ProductManager {
 		this.sessionFactory = sessionFactory;
 	}
 	
-	
+	//Methods for Magazyn Table
 	@Override
 	public void addNewPosition(Magazyn magazyn) {
 		magazyn.setId(null);
@@ -70,6 +70,7 @@ public class ProductManagerHibernateImpl implements ProductManager {
 	}
 	
 	
+	//Methods for ToOrder Table
 	@Override
 	public void addNewOrder(ToOrder order) {
 		order.setId(null);

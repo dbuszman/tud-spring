@@ -53,7 +53,7 @@ public class ProductManagerTest {
 	private final List<Magazyn> currentPositions = new ArrayList<Magazyn>();
 	private final List<ToOrder> currentOrders = new ArrayList<ToOrder>();
 	
- 	/*@Before
+ 	@Before
     public void storeCurrentDatabase() {
 
         List<Magazyn> positions = productManager.getAllPositions();
@@ -100,8 +100,24 @@ public class ProductManagerTest {
         		productManager.removeOrder(order);
         	}
         }
-    }*/
-        	
+    }
+    
+    //Tests for Magazyn Table methods
+	@Test
+	public void findPositionByObjectCheck() {
+
+		Magazyn magazyn = new Magazyn();
+		magazyn.setName(PATTERN_1);
+		magazyn.setAmount(AMOUNT_1);
+		magazyn.setMargin(MARGIN_1);
+		
+		productManager.addNewPosition(magazyn);
+		
+		Magazyn addedPosition = productManager.findPositionByObject(magazyn);
+		
+		assertEquals(magazyn, addedPosition);
+	}
+	
 	@Test
 	public void addNewPositionCheck(){
 		
@@ -168,7 +184,6 @@ public class ProductManagerTest {
 		productManager.removePosition(magazyn);
 		
 		assertFalse(productManager.isPositionWithId(magazyn.getId()));
-		
 	}
 	
 		
@@ -216,7 +231,23 @@ public class ProductManagerTest {
 		assertEquals(matchingNames.size() + 1, matchingNamesAfterAdd.size());
 	}
 	
+
 	
+	
+    //Tests for ToOrder Table methods
+	@Test
+	public void findOrderByObjectCheck() {
+
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.addNewOrder(order);
+		
+		ToOrder addedOrder = productManager.findOrderByObject(order);
+		
+		assertEquals(order, addedOrder);
+	}
 	
 	@Test
 	public void addNewOrderCheck() {
@@ -287,6 +318,23 @@ public class ProductManagerTest {
 	}
 	
 	@Test
+	public void isOrderWithIdCheck() {
+		
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.addNewOrder(order);
+		
+		assertTrue(productManager.isOrderWithId(order.getId()));
+		
+		productManager.removeOrder(order);
+		
+		assertFalse(productManager.isOrderWithId(order.getId()));
+		
+	}
+	
+	@Test
 	public void connectOrderWithPositionCheck() {
 		
 		Magazyn magazyn = new Magazyn();
@@ -306,12 +354,44 @@ public class ProductManagerTest {
 		
 		List<ToOrder> orderedPositions = productManager.getPositionOrders(magazyn);
 
-		for (ToOrder orderedPosition : orderedPositions) {
-			assertEquals(ORDEREDAMOUNT_1, orderedPosition.getOrderedAmount());
-			assertEquals(PRICE_1, orderedPosition.getPrice(), EPSILON);
-		}
+		assertEquals(ORDEREDAMOUNT_1, orderedPositions.get(0).getOrderedAmount());
+		assertEquals(PRICE_1, orderedPositions.get(0).getPrice(), EPSILON);
 		
 		assertEquals(connectedOrdersWithPositions + 1, orderedPositions.size());
+	}
+	
+	@Test
+	public void deleteOrderFromPositionCheck() {
+		
+		Magazyn magazyn = new Magazyn();
+		magazyn.setName(PATTERN_1);
+		magazyn.setAmount(AMOUNT_1);
+		magazyn.setMargin(MARGIN_1);
+		
+		productManager.addNewPosition(magazyn);
+		
+		ToOrder order = new ToOrder();
+		order.setOrderedAmount(ORDEREDAMOUNT_1);
+		order.setPrice(PRICE_1);
+		
+		productManager.addNewOrder(order);
+		
+		int connectedOrdersWithPositions = productManager.getPositionOrders(magazyn).size();
+		
+		productManager.connectOrderWithPosition(order, magazyn);
+		
+		List<ToOrder> orderedPositions = productManager.getPositionOrders(magazyn);
+		
+		assertEquals(ORDEREDAMOUNT_1, orderedPositions.get(0).getOrderedAmount());
+		assertEquals(PRICE_1, orderedPositions.get(0).getPrice(), EPSILON);
+		
+		assertEquals(connectedOrdersWithPositions + 1, orderedPositions.size());
+		
+		int connectedOrdersWithPositionsAfterAdding = productManager.getPositionOrders(magazyn).size();
+		
+		productManager.deleteOrderFromPosition(order, magazyn);
+		
+		assertEquals(connectedOrdersWithPositionsAfterAdding - 1, orderedPositions.size());
 	}
 
 }
